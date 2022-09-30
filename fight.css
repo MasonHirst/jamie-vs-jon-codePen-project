@@ -1,0 +1,86 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  font-family: 'Bungee Spice', cursive;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 35px;
+  background-color: lightblue;
+  border: 10px solid black;
+}
+
+main {
+  font-family: 'Bungee Spice', cursive;
+  color: white;
+  height: 500px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  background-image: url("https://cdnb.artstation.com/p/assets/images/images/024/212/279/large/will-wang-fafnir-background-concept.jpg?1581665495");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+
+}
+
+.jamieSection {
+/*   background-color: lightcyan; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.jamiePic {
+  opacity: 1;
+  transition: 2s;
+}
+
+.jonSection {
+/*   background-color: lightpink; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.jonPic {
+  opacity: 1;
+  transition: 2s;
+}
+
+.disappear {
+  opacity: 0.25;
+}
+
+.button {
+  padding: 5px;
+}
+
+.jonButtons, .jamieButtons {
+  display: flex;
+}
+
+.fightButton {
+  font-family: 'Bungee Spice', cursive;
+  width: 150px;
+  height: 100px;
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  font-size: 18px;
+  background-color: lightblue;
+}
+.fightButton:hover {
+  transition: .2s;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.fightButton:active {
+  transform: scale(.9);
+}
