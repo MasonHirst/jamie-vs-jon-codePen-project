@@ -41,36 +41,70 @@ let jonUpgradeButton = document.querySelector(".jonUpgradeButton");
 let jonDefenseButton = document.querySelector(".jonDefenseButton");
 //end of jon snow declarations//
 
+let jamiePic = document.querySelector(".jamiePic");
+
+let jonPic = document.querySelector(".jonPic");
+
+let jamieGrave = document.querySelector('#jamie-gravestone')
+let jonGrave = document.querySelector('#jon-gravestone')
 
 //function to fill html displays//
 let fightButton = document.querySelector(".fightButton");
 
+let resetButton = document.querySelector(".resetButton");
+
 function fillDisplays () {
   jamieHp.textContent = "HP: " + jamieLannisterHealth;
   jamieAttackStat.textContent = "Attack power: " + jamieLannisterAttack;
-  jamieDefenseStat.textContent = "Defense: " + jamieLannisterDefense;
+  jamieDefenseStat.textContent = "Defense: " + jamieLannisterDefense; 
   jonHp.textContent = "HP: " + jonSnowHealth;
   jonAttackStat.textContent = "Attack power: " + jonSnowAttack;
   jonDefenseStat.textContent = "Defense: " + jonSnowDefense;
+  fightButton.classList.add("vanish");
+  resetButton.classList.add("appear");
 }
 
 fightButton.addEventListener("click", fillDisplays);
 // end of function //
 
 
-//function to add "disappear" css if a character dies//
-let jamiePic = document.querySelector(".jamiePic");
+//function to cover section with gravestone if character dies
+function makeGrave() {
 
-let jonPic = document.querySelector(".jonPic");
+}
+//end of gravestone function
+
+
+
+// function to reset fight //
+function resetFightFunction() {
+  jonSnowHealth = 200;
+  jonSnowAttack = 25;
+  jonSnowDefense = 0;
+  jamieLannisterHealth = 200;
+  jamieLannisterAttack = 25;
+  jamieLannisterDefense = 0;
+  fillDisplays();
+  jamiePic.classList.remove("disappear"); 
+  jonPic.classList.remove("disappear"); fightButton.classList.remove("vanish")
+}
+
+resetButton.addEventListener("click", resetFightFunction);
+// end of reset function //
+
+//function to add "disappear" css if a character dies//
 
 function deathFunction() {
-  if (jamieLannisterHealth <= 0) {
-    jamiePic.classList.add("disappear");
+  if (jamieLannisterHealth <= 0) {  jamiePic.classList.add("disappear");
     console.log("Jamie Lannister has been slain")
+    jamieLannisterHealth = 0;
+    fillDisplays();
   }
   if (jonSnowHealth <= 0) {
     jonPic.classList.add("disappear");
     console.log("Jon Snow has been slain");
+    jonSnowHealth = 0;
+    fillDisplays();
   }
 }
 // end of function//
@@ -78,45 +112,60 @@ function deathFunction() {
 
 // functions to add health when potion button is clicked//
 function jamieAddHealth() {
+  if (jamieLannisterHealth < 150) {
   jamieLannisterHealth += 50;
   fillDisplays();
   console.log("Jamie healed for 50");
   console.log("Jamie's health is now " + jamieLannisterHealth);
+  } else {
+    jamieLannisterHealth = 200;
+    console.log("Jamie is at max health");
+    fillDisplays();
+  }
 }
 
 jamiePotionButton.addEventListener("click", jamieAddHealth);
 
 function jonAddHealth() {
-  jonSnowHealth += 50;
-  fillDisplays();
-  console.log("Jon healed for 50");
-  console.log("Jon's health is now " + jonSnowHealth);
+  if (jonSnowHealth < 150) {
+    jonSnowHealth += 50;
+    fillDisplays();
+    console.log("Jon healed for 50");
+    console.log("Jon's health is now " + jonSnowHealth);
+  } else { 
+      jonSnowHealth = 200;
+      console.log("Jon is at max health");
+      fillDisplays();
+  }
 }
 
 jonPotionButton.addEventListener("click", jonAddHealth);
 // end of function //
 
 
-// function to attack opponent //
+// functions to attack opponent //
 function jamieAttackFunction() {
   jonSnowHealth -= jamieLannisterAttack - jonSnowDefense;
   console.log("Jamie attacks Jon for " + (jamieLannisterAttack - jonSnowDefense) + " damage");
   console.log("Jon's health is now " + jonSnowHealth);
   fillDisplays();
   deathFunction();
+  stopJonbuttons();
 }
+
 
 jamieAttackButton.addEventListener("click", jamieAttackFunction);
 
-function johnAttackFunction() {
+function jonAttackFunction() {
   jamieLannisterHealth -= jonSnowAttack - jamieLannisterDefense;
   console.log("Jon attacks Jamie for " + (jonSnowAttack - jamieLannisterDefense) + " damage");
   console.log("Jamie's health is now " + jamieLannisterHealth);
   fillDisplays();
   deathFunction();
+  stopJamieButtons();
 }
 
-jonAttackButton.addEventListener("click", johnAttackFunction);
+jonAttackButton.addEventListener("click", jonAttackFunction);
 // end of function //
 
 

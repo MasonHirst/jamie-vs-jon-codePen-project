@@ -1,43 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Poppins:wght@800&display=swap" rel="stylesheet">
 
-<header>
-  <h1>Jamie Lannister</h1>
-  <h1>Vs.</h1>
-  <h1>Jon Snow</h1>
-</header>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="fight.css">
+</head>
+<body>
+  
+  
+  
+  <header>
+    <h1>Jamie Lannister</h1>
+    <h1>Vs.</h1>
+    <h1>Jon Snow</h1>
+  </header>
+  
+  <main>
+    <section class="jamieSection">
+      <div id="jamie-gravestone"></div>
 
-<main>
-  <section class="jamieSection">  
-    <section class="jamieButtons">
-      <button class="jamieAttackButton">Attack!</button>
-      <button class="jamiePotionButton">Drink potion</button>
-      <button class="jamieUpgradeButton">Upgrade sword</button>
-      <button class="jamieDefenseButton">Upgrade Shield</button>
-      </section>  
-    <h3 class="jamieHp">Javascript is broken :/</h3>
-    <img class="jamiePic" src="https://www.totallytimelines.com/wp-content/uploads/2019/02/Jaime-Lannister.jpg" width=170>
-    <section class="jamieStats">
-      <p class="jamieHpStat">Max hit points: 200</p>
-      <p class="jamieAttackStat">Javascript is broken :/</p>
-      <p class="jamieDefenseStat">Javascript is broken :/</p>
+      <section class="jamieButtons">
+        <button class="jamieButton jamieAttackButton">Attack!</button>
+        <button class="jamieButton jamiePotionButton">Drink potion</button>
+        <button class="jamieButton jamieUpgradeButton">Upgrade sword</button>
+        <button class="jamieButton jamieDefenseButton">Upgrade Shield</button>
+      </section> 
+
+      <h3 class="jamieHp">Javascript is broken :/</h3>
+      <img class="jamiePic" src="https://www.totallytimelines.com/wp-content/uploads/2019/02/Jaime-Lannister.jpg" width=170>
+      
+      <section class="jamieStats">
+        <p class="jamieHpStat">Max hit points: 200</p>
+        <p class="jamieAttackStat">Javascript is broken :/</p>
+        <p class="jamieDefenseStat">Javascript is broken :/</p>
+      </section>
     </section>
-  </section>
+    
+    
+   
+    <section class="jonSection">        
+      
+      <div id="jon-gravestone"></div>
+
+      <section class="jonButtons">
+        <button class="jonButton jonAttackButton">Attack!</button>
+        <button class="jonButton jonPotionButton">Drink potion</button>
+        <button class="jonButton jonUpgradeButton">Upgrade sword</button>
+        <button class="jonButton jonDefenseButton">Upgrade Shield</button>
+      </section>  
+      
+      <h3 class="jonHp">Javascript is broken :/</h3>
+      <img class="jonPic" src="https://upload.wikimedia.org/wikipedia/en/3/30/Jon_Snow_Season_8.png" width=170>
+      
+      <section class="jonStats">
+        <p class="jonHpStat">Max hit points: 200</p>
+        <p class="jonAttackStat">Javascript is broken :/</p>
+        <p class="jonDefenseStat">Javascript is broken :/</p>
+      </section>
+    
+    </section>
+  </main>
+  
   
   <section class="fightButtonSection">
-    <button class="fightButton">Fight!</button>
-  </section>
- 
-  <section class="jonSection">        <section class="jonButtons">
-      <button class="jonAttackButton">Attack!</button>
-      <button class="jonPotionButton">Drink potion</button>
-      <button class="jonUpgradeButton">Upgrade sword</button>
-    <button class="jonDefenseButton">Upgrade Shield</button>
-      </section>  
-    <h3 class="jonHp">Javascript is broken :/</h3>
-    <img class="jonPic" src="https://upload.wikimedia.org/wikipedia/en/3/30/Jon_Snow_Season_8.png" width=170>
-    <section class="jonStats">
-      <p class="jonHpStat">Max hit points: 200</p>
-      <p class="jonAttackStat">Javascript is broken :/</p>
-      <p class="jonDefenseStat">Javascript is broken :/</p>
+      <button class="fightButton">Fight!</button>
     </section>
-  </section>
-</main>
+  <button class="resetButton">Reset Fight</button>
+
+
+  <script src="fight.js"></script>
+</body>
+</html>
+
