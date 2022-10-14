@@ -17,6 +17,8 @@ let jamiePotionButton = document.querySelector(".jamiePotionButton");
 let jamieUpgradeButton = document.querySelector(".jamieUpgradeButton");
 
 let jamieDefenseButton = document.querySelector(".jamieDefenseButton");
+
+let jamiePicDiv = document.querySelector('#jamiePicDiv')
 // end of jamie lannister declarations//
 
 
@@ -48,6 +50,8 @@ let jonPic = document.querySelector(".jonPic");
 let jamieGrave = document.querySelector('#jamie-gravestone')
 let jonGrave = document.querySelector('#jon-gravestone')
 
+let jonPicDiv = document.querySelector('#jonPicDiv')
+
 //function to fill html displays//
 let fightButton = document.querySelector(".fightButton");
 
@@ -62,6 +66,7 @@ function fillDisplays () {
   jonDefenseStat.textContent = "Defense: " + jonSnowDefense;
   fightButton.classList.add("vanish");
   resetButton.classList.add("appear");
+  makeGrave()
 }
 
 fightButton.addEventListener("click", fillDisplays);
@@ -70,7 +75,26 @@ fightButton.addEventListener("click", fillDisplays);
 
 //function to cover section with gravestone if character dies
 function makeGrave() {
+  if (jamieLannisterHealth <= 0) {
+    jamieGrave.innerHTML = '<img src="gravestone.png" height=300px class="gravestone-pic">'
 
+    jonPicDiv.innerHTML = '<img class="jamiePic" src="jon-happy-gif.gif" height=240px>'
+  }
+  if (jonSnowHealth <= 0) {
+    jonGrave.innerHTML = '<img src="gravestone.png" height=300px class="gravestone-pic">'
+
+    jamiePicDiv.innerHTML = '<img class="jonPic" src="jamie-happy-gif.gif" height=170px>'
+  }
+}
+
+//function to remove gravestones on reset
+function removeGrave() {
+  jamieGrave.innerHTML = ''
+  jonGrave.innerHTML = ''
+
+  jamiePicDiv.innerHTML = '<img class="jamiePic" src="https://www.totallytimelines.com/wp-content/uploads/2019/02/Jaime-Lannister.jpg" height=200px>'
+
+  jonPicDiv.innerHTML = '<img class="jonPic" src="https://upload.wikimedia.org/wikipedia/en/3/30/Jon_Snow_Season_8.png" height=240px>'
 }
 //end of gravestone function
 
@@ -87,6 +111,8 @@ function resetFightFunction() {
   fillDisplays();
   jamiePic.classList.remove("disappear"); 
   jonPic.classList.remove("disappear"); fightButton.classList.remove("vanish")
+
+  removeGrave()
 }
 
 resetButton.addEventListener("click", resetFightFunction);

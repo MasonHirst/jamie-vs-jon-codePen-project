@@ -36,7 +36,10 @@
       </section> 
 
       <h3 class="jamieHp">Javascript is broken :/</h3>
-      <img class="jamiePic" src="https://www.totallytimelines.com/wp-content/uploads/2019/02/Jaime-Lannister.jpg" width=170>
+
+      <div id="jamiePicDiv">
+        <img class="jamiePic" src="https://www.totallytimelines.com/wp-content/uploads/2019/02/Jaime-Lannister.jpg" height=200px>
+      </div>
       
       <section class="jamieStats">
         <p class="jamieHpStat">Max hit points: 200</p>
@@ -59,7 +62,10 @@
       </section>  
       
       <h3 class="jonHp">Javascript is broken :/</h3>
-      <img class="jonPic" src="https://upload.wikimedia.org/wikipedia/en/3/30/Jon_Snow_Season_8.png" width=170>
+
+      <div id="jonPicDiv">
+        <img class="jonPic" src="https://upload.wikimedia.org/wikipedia/en/3/30/Jon_Snow_Season_8.png" height=240px>
+      </div>
       
       <section class="jonStats">
         <p class="jonHpStat">Max hit points: 200</p>
@@ -69,13 +75,27 @@
     
     </section>
   </main>
+
+
+  <footer>
+    <div>
+      <h3 id="footer-bio">This website was created by Mason Hirst<br>There are probably some bugs</h3>
+    </div>
+    <div>
+      <form>
+        <input placeholder="comments/concerns/questions...">
+        
+        <button>Submit</button>
+      </form>
+    </div>
+  </footer>
+
   
   
   <section class="fightButtonSection">
       <button class="fightButton">Fight!</button>
     </section>
   <button class="resetButton">Reset Fight</button>
-
 
   <script src="fight.js"></script>
 </body>

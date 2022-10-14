@@ -29,10 +29,11 @@ main {
 }
 
 .jamieSection {
-/*   background-color: lightcyan; */
+  /* background-color: lightcyan; */
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 
 .jamiePic {
@@ -41,10 +42,11 @@ main {
 }
 
 .jonSection {
-/*   background-color: lightpink; */
+  /* background-color: lightpink; */
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 
 .jonPic {
@@ -68,7 +70,7 @@ main {
   font-family: 'Bungee Spice', cursive;
   position: relative;
   z-index: 2;
-  top: -550px;
+  top: -740px;
   left: 10%;
   
   width: 80%;
@@ -90,11 +92,23 @@ main {
   transform: scale(1);
 }
 
+
+.gravestone-pic {
+  position: absolute;
+  right: -42px;
+  top: -100px;
+  height: 550px;
+  z-index: 2;
+  opacity: 1;
+}
+
+
+
 .resetButton {
 font-family: 'Bungee Spice', cursive;
   position: relative;
   z-index: 1;
-  top: -600px;
+  top: -810px;
   left: 46%;
 
 background-color: initial;
@@ -290,4 +304,16 @@ border-radius: 10px;
 
 .jonButton:active {
 transform: scale(.9)
+}
+
+
+
+footer {
+  height: 180px;
+  width: 99.3%;
+  background-color: #00ffd5;
+  border: 5px solid black;
+
+  display: flex;
+  
 }
