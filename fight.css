@@ -24,7 +24,6 @@ main {
   padding: 20px;
   background-image: url("https://i.pinimg.com/originals/8f/31/a8/8f31a8e9b9fc161f40cdd24679c6e28c.jpg");
   background-repeat: no-repeat;
-/*     background-attachment: fixed; */
   background-position: center -250px;
 }
 
@@ -315,5 +314,5 @@ footer {
   border: 5px solid black;
 
   display: flex;
-  
+
 }
