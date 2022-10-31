@@ -4,8 +4,8 @@
   box-sizing: border-box;
 }
 
-html {
-  max-height: 100vh;
+body {
+  background-color: #a8a8a8;
 }
 
 header {
@@ -112,7 +112,7 @@ main {
 font-family: 'Bungee Spice', cursive;
   position: relative;
   z-index: 1;
-  top: -790px;
+  top: -340px;
   left: 46%;
 
 background-color: initial;
@@ -145,6 +145,8 @@ transform: scale(1.02);
 
 .vanish {
 z-index: -1;
+left: 40%;
+width: 20%
 }
 
 .appear {

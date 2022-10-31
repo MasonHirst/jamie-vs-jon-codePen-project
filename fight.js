@@ -4,7 +4,7 @@ let jamieLannisterHealth = 200;
 let jamieLannisterAttack = 25;
 let jamieLannisterDefense = 0;
 
-let jamieHp =   document.querySelector(".jamieHp");
+let jamieHp = document.querySelector(".jamieHp");
 
 let jamieAttackStat = document.querySelector(".jamieAttackStat");
 
@@ -110,7 +110,8 @@ function resetFightFunction() {
   jamieLannisterDefense = 0;
   fillDisplays();
   jamiePic.classList.remove("disappear"); 
-  jonPic.classList.remove("disappear"); fightButton.classList.remove("vanish")
+  jonPic.classList.remove("disappear"); 
+  fightButton.classList.remove("vanish")
 
   removeGrave()
 }
